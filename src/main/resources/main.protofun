@@ -1,0 +1,14 @@
+algorithm Demo {
+    // Java impl: https://github.com/protocolbuffers/protobuf/tree/main/java/core/src/main/java/com/google/protobuf
+    // TODO: Create Message, Builder, MessageLite, MessageLiteOrBuilder, MessageBuilder, Descriptors
+    var x: Int := 12
+    print(1 + 2 * 5)
+    print(8 - 4 * 3 / (4 - 1))
+    print(1 - 1)
+    print(6 / 3)
+    print(20 * 5)
+    print(1 + (2 + 3))
+    x := x + 1
+    print(1 + 2 + x)
+
+}

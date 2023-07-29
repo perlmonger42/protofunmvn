@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_package = "com.google.protofun";
+option java_multiple_files = true;
+
+service ArithmeticService {
+
+  rpc Add(Sum) returns (Number);
+  rpc Substract (Difference) returns (Number);
+}
+
+message Sum {
+  oneof addend {
+    int64 addend_64 = 1;
+    int32 addend_32 = 2;
+  }
+
+  oneof augend {
+    int64 augend_64 = 3;
+    int32 augend_32 = 4;
+  }
+}
+
+message Number {
+  oneof number {
+    int64 int_64 = 1;
+    int32 int_32 = 2;
+    sint64 sint_64 = 3;
+    sint32 sint_32 = 4;
+    double double = 5;
+  }
+}
+
+message Difference {
+  oneof minuend {
+    int64 minuend_64 = 1;
+    int32 minuend_32 = 2;
+  }
+
+  oneof subtrahend {
+    int64 subtrahend_64 = 3;
+    int32 subtrahend_32 = 4;
+  }
+}

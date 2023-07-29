@@ -1,0 +1,3 @@
+The gRPC code won't be created unless `mvn install` is run
+
+Modifications to the ANTLR4 grammars may require `mvn clean install` to be detected (clean is required)
